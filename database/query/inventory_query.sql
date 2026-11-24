@@ -1,8 +1,3 @@
-CREATE TABLE inventory (
-  item_id INT PRIMARY KEY,
-  item_name VARCHAR(50) NOT NULL,
-  item_stock INT
-);
 
 INSERT INTO inventory (item_id, item_name, item_stock)
 VALUES
