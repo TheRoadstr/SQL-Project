@@ -10,4 +10,4 @@ SELECT
   employee_number,
   date_hired,
   departments
-FROM employees
+FROM employees;
