@@ -1,5 +1,16 @@
-INSERT INTO repairs_finished (repair_ticket_date_received, device_type, customer_id, device_status, date_finished)
+INSERT INTO repairs_finished (repair_ticket_date_received, customer_id, date_finished)
 VALUES
-  ('2026-10-26', 'Laptop', 67, 'completed', '2026-11-02'),
-  ('2026-11-02', 'Laptop', 68, 'in_progress', NULL),
-  ('2026-11-02', 'Computer', 69, 'completed', '2026-11-05');
+  ('2026-10-26', 67, '2026-11-02'),
+  ('2026-11-02', 68, NULL),
+  ('2026-11-02', 69, '2026-11-05');
+
+SELECT
+  e.repair_ticket_id,
+  e.repair_ticket_date_received,
+  d.device_type,
+  d.device_model,
+  d.device_status,
+  e.customer_id,
+  e.date_finished
+FROM repairs_finished e
+JOIN devices d ON e.repair_ticket_id = d.device_id;
