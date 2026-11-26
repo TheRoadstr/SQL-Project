@@ -9,4 +9,5 @@ CREATE TABLE repairs_finished (
 ) AUTO_INCREMENT = 1000;
 
 ALTER TABLE repairs_finished
-DROP COLUMN device_type, device_status;
+DROP COLUMN device_type,
+DROP COLUMN device_status;
