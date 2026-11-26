@@ -7,3 +7,6 @@ CREATE TABLE repairs_finished (
   date_finished DATE,
   FOREIGN KEY (customer_id) REFERENCES customers(customer_id)
 ) AUTO_INCREMENT = 1000;
+
+ALTER TABLE repairs_finished
+DROP COLUMN device_type, device_status;
